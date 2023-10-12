@@ -68,7 +68,8 @@ capture <- function(selector,
 #' @importFrom jsonlite toJSON
 #'
 #' @example examples/pdf.R
-capture_pdf <- function(selector, 
+capture_pdf <- function(inputID,
+                        selector, 
                         filename, 
                         ..., 
                         margins = 15, 
@@ -81,6 +82,7 @@ capture_pdf <- function(selector,
     filename <- paste0(filename, ".pdf")
   tagList(
     tags$button(
+      id = inputID,
       class = paste(button_class, "btn-capture btn-capture-screenshot-pdf"),
       `data-selector` = selector,
       `data-filename` = filename,
