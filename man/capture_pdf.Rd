@@ -5,6 +5,7 @@
 \title{Capture Screenshot as PDF}
 \usage{
 capture_pdf(
+  inputID,
   selector,
   filename,
   ...,
